@@ -1,0 +1,327 @@
+@import '_reset';
+@import '_color-scheme';
+@import '_typography';
+@import '_responsive_vars';
+
+body {
+    font-family: 'IBM Plex Serif Light';
+    font-size: 16px;
+    line-height: 28px;
+    color: $gray;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrap {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+
+    &.color-scheme-2 {
+        background: $bunker;
+        color: $white;
+    }
+}
+
+.logo-wrap {
+    display: inline-flex;
+    align-items: center;
+
+    img {
+        margin-right: 8px;
+    }
+
+    span {
+        font-family: 'IBM Plex Serif Regular';
+        font-weight: bold;
+        font-size: 18px;
+        color: $daisy-bush;
+    }
+}
+
+.header{
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1170px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 28px 0;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 90px;
+
+            @include breakpoint(max-sm-desc) {
+                padding-right: 20px;
+            }
+
+            a {
+                color: $bunker;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: 600;
+
+                &:first-child {
+                    padding-right: 45px;
+                }
+            }
+        }
+
+        &.color-scheme-2 {
+            background: $bunker;
+
+            a, span {
+                color: $white;
+            }
+        }
+    }
+
+    &-content__right {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &-content:last-child {
+        font-family: 'Open Sans Regular';
+        color: $bunker;
+
+        @include breakpoint(max-mob) {
+            display: none;
+        }
+    }
+
+}
+
+
+.main {
+
+    &-wrap {
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    &-text {
+        text-align: center;
+        max-width: 770px;
+        margin: 0 auto;
+        font-family: 'Open Sans Regular';
+        color: $regent-gray;
+
+        h1 {
+            font-size: 40px;
+            font-family: 'IBM Plex Serif Light';
+            margin-top: 10px;
+            color: $bunker;
+        }
+
+        p:last-child {
+            font-family: 'Open Sans Light';
+            font-size: 18px;
+            margin-top: 25px;
+        }
+    }
+
+    &-content {
+        max-width: 1170px;
+        width: 100%;
+        margin: 40px auto;
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint(max-desc) {
+            justify-content: space-around;
+        }
+
+        @include breakpoint(max-sm-desc) {
+            flex-direction: column;
+            justify-content: center;
+        }
+  
+    }
+
+    &-buttons {
+        display: flex;
+        justify-content: center;
+
+        @include breakpoint(max-mob) {
+            flex-direction: column;
+            align-items: center;
+    
+        }
+    }
+
+    &-buttons__button {
+
+        max-width: 160px;
+        border: 2px solid $daisy-bush;
+        font-family: 'IBM Plex Serif Regular';
+        border-radius: 4px;
+        margin: 0 17px;
+
+        @include breakpoint(max-mob) {
+            margin-bottom: 20px;
+    
+        }
+
+        a {
+            display: block;
+            padding: 12px 40px;
+            white-space: nowrap;
+            color: $bunker;
+            line-height: 24px;
+        }
+
+        &.btn-filled {
+            background-color: $governor-bay;
+
+            a{
+                color: $alabaster;
+            }
+        }
+    }
+
+    &-wrap.color-scheme-1 {
+        background: $alabaster;
+
+        .article-content {
+            box-shadow: none;
+        }
+    }
+
+    &-wrap.color-scheme-2 {
+        background: $bunker;
+
+        p, h1 {
+            color: $white;
+        }
+
+        .article-content {
+            background: $mirage;
+
+            &__name,
+            &__link a{
+                color: $indigo;
+            }
+
+            &__text p{
+                color: $smoke;
+            }
+        }
+
+        .main-buttons__button a{
+            color: $white;
+        }
+    }
+    
+}
+
+.article {
+
+    &-content {
+        max-width: 370px;
+        box-shadow: 3px 20px 35px -1px rgba(0, 0, 0, 0.05);
+
+        @include breakpoint(max-desc) {
+            max-width: 300px;
+        }
+
+        @include breakpoint(max-sm-desc) {
+            max-width: 100%;
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+    }
+
+    &-content__desc {
+        padding: 40px;
+        text-align: left;
+    }
+
+    &-content__author {
+        color: $regent-gray;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    &-content__name {
+        font-size: 22px;
+        color: $daisy-bush;
+        margin-top: 12px;
+
+    }
+
+    &-content__text {
+        font-family: 'Open Sans Regular';
+        margin: 10px 0;
+    }
+
+    &-content__link {
+        font-family: 'IBM Plex Serif Regular';
+        line-height: 24px;
+        color: $daisy-bush;
+    }
+
+
+}
+
+.footer {
+
+    &-wrap {
+        text-align: center;
+        padding-bottom: 55px;
+
+        &.color-scheme-1 {
+            background: $alabaster;
+    
+        }
+    }
+
+    &-content {
+
+        max-width: 770px;
+        margin: 0 auto;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            margin: 35px 0;
+
+            li:not(:last-child) {
+                margin-right: 15px;
+            }
+        }  
+
+        &.copyrights {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 300;
+        }
+            
+    }
+
+    &-content__text {
+        margin-top: 35px;
+        font-family: 'Open Sans Regular';
+    }
+
+    &-wrap.color-scheme-2 {
+        background: $bunker;
+
+        p,
+        .footer-content:last-child {
+            color: $regent-gray;
+        }
+
+        span{
+            color: $white;
+        }
+    }
+}

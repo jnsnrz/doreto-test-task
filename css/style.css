@@ -1,0 +1,287 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'IBM Plex Serif Light';
+  src: url("../fonts/IBMPlexSerif-Light.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'IBM Plex Serif Regular';
+  src: url("../fonts/IBMPlexSerif-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url("../fonts/opensanslight.ttf") format("truetype"), url("../fonts/opensanslight.woff") format("woff"), url("../fonts/opensanslight.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url("../fonts/opensans.ttf") format("truetype"), url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url("../fonts/opensansbold.ttf") format("truetype"), url("../fonts/opensansbold.woff") format("woff"), url("../fonts/opensansbold.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal; }
+
+body {
+  font-family: 'IBM Plex Serif Light';
+  font-size: 16px;
+  line-height: 28px;
+  color: #646C75; }
+
+a {
+  text-decoration: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.wrap {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto; }
+  .wrap.color-scheme-2 {
+    background: #10161C;
+    color: #FFFFFF; }
+
+.logo-wrap {
+  display: inline-flex;
+  align-items: center; }
+  .logo-wrap img {
+    margin-right: 8px; }
+  .logo-wrap span {
+    font-family: 'IBM Plex Serif Regular';
+    font-weight: bold;
+    font-size: 18px;
+    color: #3625A9; }
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 0; }
+  .header-wrap ul {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 90px; }
+    @media (max-width: 990px) {
+      .header-wrap ul {
+        padding-right: 20px; } }
+    .header-wrap ul a {
+      color: #10161C;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 600; }
+      .header-wrap ul a:first-child {
+        padding-right: 45px; }
+  .header-wrap.color-scheme-2 {
+    background: #10161C; }
+    .header-wrap.color-scheme-2 a, .header-wrap.color-scheme-2 span {
+      color: #FFFFFF; }
+
+.header-content__right {
+  display: flex;
+  justify-content: flex-end; }
+
+.header-content:last-child {
+  font-family: 'Open Sans Regular';
+  color: #10161C; }
+  @media (max-width: 479px) {
+    .header-content:last-child {
+      display: none; } }
+
+.main-wrap {
+  text-align: center;
+  padding: 100px 0; }
+
+.main-text {
+  text-align: center;
+  max-width: 770px;
+  margin: 0 auto;
+  font-family: 'Open Sans Regular';
+  color: #8E959E; }
+  .main-text h1 {
+    font-size: 40px;
+    font-family: 'IBM Plex Serif Light';
+    margin-top: 10px;
+    color: #10161C; }
+  .main-text p:last-child {
+    font-family: 'Open Sans Light';
+    font-size: 18px;
+    margin-top: 25px; }
+
+.main-content {
+  max-width: 1170px;
+  width: 100%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between; }
+  @media (max-width: 1160px) {
+    .main-content {
+      justify-content: space-around; } }
+  @media (max-width: 990px) {
+    .main-content {
+      flex-direction: column;
+      justify-content: center; } }
+
+.main-buttons {
+  display: flex;
+  justify-content: center; }
+  @media (max-width: 479px) {
+    .main-buttons {
+      flex-direction: column;
+      align-items: center; } }
+
+.main-buttons__button {
+  max-width: 160px;
+  border: 2px solid #3625A9;
+  font-family: 'IBM Plex Serif Regular';
+  border-radius: 4px;
+  margin: 0 17px; }
+  @media (max-width: 479px) {
+    .main-buttons__button {
+      margin-bottom: 20px; } }
+  .main-buttons__button a {
+    display: block;
+    padding: 12px 40px;
+    white-space: nowrap;
+    color: #10161C;
+    line-height: 24px; }
+  .main-buttons__button.btn-filled {
+    background-color: #4534BA; }
+    .main-buttons__button.btn-filled a {
+      color: #FAFAFA; }
+
+.main-wrap.color-scheme-1 {
+  background: #FAFAFA; }
+  .main-wrap.color-scheme-1 .article-content {
+    box-shadow: none; }
+
+.main-wrap.color-scheme-2 {
+  background: #10161C; }
+  .main-wrap.color-scheme-2 p, .main-wrap.color-scheme-2 h1 {
+    color: #FFFFFF; }
+  .main-wrap.color-scheme-2 .article-content {
+    background: #181E29; }
+    .main-wrap.color-scheme-2 .article-content__name,
+    .main-wrap.color-scheme-2 .article-content__link a {
+      color: #6555D0; }
+    .main-wrap.color-scheme-2 .article-content__text p {
+      color: #B0B8BF; }
+  .main-wrap.color-scheme-2 .main-buttons__button a {
+    color: #FFFFFF; }
+
+.article-content {
+  max-width: 370px;
+  box-shadow: 3px 20px 35px -1px rgba(0, 0, 0, 0.05); }
+  @media (max-width: 1160px) {
+    .article-content {
+      max-width: 300px; } }
+  @media (max-width: 990px) {
+    .article-content {
+      max-width: 100%;
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 50px; } }
+
+.article-content__desc {
+  padding: 40px;
+  text-align: left; }
+
+.article-content__author {
+  color: #8E959E;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+.article-content__name {
+  font-size: 22px;
+  color: #3625A9;
+  margin-top: 12px; }
+
+.article-content__text {
+  font-family: 'Open Sans Regular';
+  margin: 10px 0; }
+
+.article-content__link {
+  font-family: 'IBM Plex Serif Regular';
+  line-height: 24px;
+  color: #3625A9; }
+
+.footer-wrap {
+  text-align: center;
+  padding-bottom: 55px; }
+  .footer-wrap.color-scheme-1 {
+    background: #FAFAFA; }
+
+.footer-content {
+  max-width: 770px;
+  margin: 0 auto; }
+  .footer-content ul {
+    display: flex;
+    justify-content: center;
+    margin: 35px 0; }
+    .footer-content ul li:not(:last-child) {
+      margin-right: 15px; }
+  .footer-content.copyrights {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300; }
+
+.footer-content__text {
+  margin-top: 35px;
+  font-family: 'Open Sans Regular'; }
+
+.footer-wrap.color-scheme-2 {
+  background: #10161C; }
+  .footer-wrap.color-scheme-2 p,
+  .footer-wrap.color-scheme-2 .footer-content:last-child {
+    color: #8E959E; }
+  .footer-wrap.color-scheme-2 span {
+    color: #FFFFFF; }
