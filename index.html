@@ -36,9 +36,9 @@
         <main>
             <div class="main-wrap color-scheme-0">
                 <div class="main-text">
-                    <p>Secondary title</p>
-                    <h1>Articles</h1>
-                    <p>This is a paragraph. To edit this paragraph, highlight the text and replace it with your own content.
+                    <p id="sec_title">Secondary title</p>
+                    <h1 id="title">Articles</h1>
+                    <p id="sub_title">This is a paragraph. To edit this paragraph, highlight the text and replace it with your own content.
                         Either type the text directly or paste the copied text here.</p>
                 </div>
                 <div class="main-content">
@@ -110,7 +110,7 @@
                     <div class="main-buttons__button btn-filled">
                         <a href="#">Contact us</a>
                     </div>
-                    <div class="main-buttons__button">
+                    <div id="sec_button" class="main-buttons__button">
                         <a href="#">Learn more</a>
                     </div>
                 </div>
@@ -142,6 +142,62 @@
                 </div>
             </div>
         </footer>
+
+        <!-- popup settings window -->
+        <div class="popup-wrap">
+            <div class="popup-wrap__content">
+                <div class="popup-content__header">
+                    <span>Block settings</span>
+                </div>
+                <div class="popup-content__tabs">
+                    <form>
+                        <fieldset id="tabs">
+                            <input type="radio" id="radiotab1" value="tab1" name="tab1" checked> 
+                            <label for="radiotab1">General</label>
+                            <input type="radio" id="radiotab2" value="tab2" name="tab1">
+                            <label for="radiotab2">Appearance</label>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="popup-content__options">
+                    <div id="tab1" class="popup-content__tabcontent">
+                        <p>Layout options</p>
+                        <div class="popup-options__wrap">
+                                <label>Select which elements should be displayed</label>
+                                <fieldset id="layout-options">
+                                    <ul>
+                                        <li><input type="checkbox" value="sec_title" checked> Block secondary title</li>
+                                        <li><input type="checkbox" value="title" checked> Block title</li>
+                                        <li><input type="checkbox" value="sub_title" checked> Block subtitle</li>
+                                        <li><input type="checkbox" value="sec_button" checked> Secondary button</li>
+                                    </ul>
+                                </fieldset>
+                        </div>
+                    </div>
+                    <div id="tab2" class="popup-content__tabcontent hidden">
+                            <p>Style options</p>
+                            <div class="popup-options__wrap">
+                                    <label>Select a color scheme</label>
+                                    <fieldset id="color-scheme">
+                                            <input type="radio" id="color1" value="color-scheme-0" name="color-scheme" checked> 
+                                            <label for="radiotab1">Light</label>
+                                            <input type="radio" id="color2" value="color-scheme-1" name="color-scheme">
+                                            <label for="radiotab2">Gray</label>
+                                            <input type="radio" id="color3" value="color-scheme-2" name="color-scheme">
+                                            <label for="radiotab2">Dark</label>
+                                    </fieldset>
+                            </div>
+                        </div>
+                </div>
+                <div class="popup-content__footer">
+                        <button id="save">Save</button>
+                        <button id="cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <!-- / popup settings window -->
+
     </div>  
+    <script src="scripts/script.js"></script>
 </body>
 </html>

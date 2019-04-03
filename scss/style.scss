@@ -19,6 +19,14 @@ img {
     height: auto;
 }
 
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
 .wrap {
     max-width: 1920px;
     width: 100%;
@@ -324,4 +332,103 @@ img {
             color: $white;
         }
     }
+}
+
+.popup {
+
+    &-wrap {
+        width: 350px;
+        background: $white;
+        border: 1px solid $smoke;
+        box-shadow: 3px 20px 35px -1px rgba(0, 0, 0, 0.05);
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-family: 'Source Sans Pro', sans-serif; 
+        color: $bunker;
+    }
+
+    &-content__header {
+        padding: 10px 5px;
+        background: #F0F2F5;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    &-content__tabs {
+        padding: 10px 25px 0 25px;
+    }
+
+    &-content__tabcontent {
+
+        p {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+
+    &-content__options { 
+        padding: 25px;
+    }
+
+    &-options__wrap {
+        padding: 15px 0;
+    }
+
+    &-content__tabs {
+
+        label {
+            display: inline-block;
+            width: 45%;
+            height: 40px;
+            line-height: 38px;
+            text-align: center;
+            border: solid 1px $regent-gray;
+            font-weight: bold;
+            border-radius: 4px;
+            font-size: 14px;
+          }
+          
+          input[type="radio"] {
+            display: none;
+          }
+          
+          input[type="radio"]:checked + label {
+            border: solid 2px $bunker;
+            background: $bunker;
+            color: $white;
+          }
+
+    }
+
+    &-options__wrap {
+
+        li {
+            font-weight: bold;
+        }
+    }
+
+    &-content__footer {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $smoke;
+
+        button {
+            width: 50%;
+            background: $white;
+            height: 40px;
+            border: none;
+
+            &:first-child {
+                border-right: 1px solid $smoke;
+            }
+        }
+
+
+    
+    }
+
+
 }
